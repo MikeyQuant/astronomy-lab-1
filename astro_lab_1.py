@@ -40,5 +40,5 @@ st.header(" ")
 dff=df[df["object"].isin(objects)]
 log=st.checkbox("Use Log Scale?",True)
 fig=px.bar(dff,x="object",y="distance",color="object",log_y=log)
-
+fig.update_layout(showlegend=False)
 st.plotly_chart(fig)
